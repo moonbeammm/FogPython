@@ -1,4 +1,4 @@
-#!/Usr/bin/env python 
+# !/Usr/bin/env python 
 
 # code 1
 # print 'hello world'
@@ -32,10 +32,36 @@
 # 	print 'you are a children'
 
 # code 6
-age = raw_input('your age is :')
-print age
-age = int(age)
-if age < 20:	
-	print 'children'
-else :
-	print 'adult'
+# age = raw_input('your age is :')
+# print age
+# age = int(age)
+# if age < 20:	
+# 	print 'children'
+# else :
+# 	print 'adult'
+
+# code 7 dict 
+# dict = {'name' : 'sun', 'age' : 12}
+# dict['sun'] = 'guang'
+# print dict
+
+# dict.pop('name')
+# print dict
+
+# code 8 set
+# set = set([1,1,1,1,2])
+# print set
+
+
+
+
+
+
+
+
+
+
+
+
+
+
