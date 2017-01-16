@@ -1,2 +1,2 @@
 # FogPython
-学习Python记录
+学习Python.
