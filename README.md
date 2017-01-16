@@ -1,2 +1,2 @@
-# FogPython
-学习Python.
+# GXPython
+学习python.
