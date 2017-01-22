@@ -307,5 +307,37 @@ def calendar_formatter():
 print '调用自定义模块里的方法'
 
 # k_date是我自定义的一个模块
-import k_date
-k_date.print_hello()
+# import k_date
+# k_date.print_hello()
+
+
+
+
+print 'dir()函数'
+# dir()函数一个排好序的字符串列表，内容是一个模块里定义过的名字。
+# 返回的列表容纳了在一个模块里定义的所有模块，变量和函数。如下一个简单的实例：
+# 他可以返回math模块所有定义的方法
+
+# 导入内置math模块
+# import math
+#
+# content = dir(math)
+#
+# print content;
+
+
+print 'globals()和locals()函数'
+
+# 根据调用地方的不同，globals()和locals()函数可被用来返回全局和局部命名空间里的名字。
+# 如果在函数内部调用locals()，返回的是所有能在该函数里访问的命名。
+# 如果在函数内部调用globals()，返回的是所有在该函数里能访问的全局名字。
+# 两个函数的返回类型都是字典。所以名字们能用keys()函数摘取。
+
+# def mine_method():
+#     name = 'sun'
+#     age = 12
+#     print locals().keys()
+#
+# all_name = 'world'
+# print globals().keys()
+# mine_method()
