@@ -132,9 +132,9 @@ def multiReturn(x,y):
 # print x, y
 # # 返回的为(3,-5).这是什么类型?
 # print r
-
-print 'Python变量类型'
-
+print '-------->>>>>>'
+print '1.Python变量类型'
+print '<<<<<---------'
 # 概念
 # python中有五个标准的数据类型
 
@@ -217,18 +217,24 @@ def dict_method():
 
 # dict_method()
 
-
-print 'Python运算符'
+print '--------->>>>>'
+print '2.Python运算符'
+print '<<<<<---------'
 # 见笔记Note_Python
 
-print 'Python条件语句'
+print '--------->>>>>'
+print '3.Python条件语句'
+print '<<<<<---------'
+
 # if 判断条件：
 #     执行语句……
 # else：
 #     执行语句……
 
+print '--------->>>>>'
+print '4.Python循环语句'
+print '<<<<<---------'
 
-print 'Python循环语句'
 
 def do_while_method():
     count = 0
@@ -269,7 +275,10 @@ def output_prime_number():
 
 # output_prime_number()
 
-print 'Python日期和时间'
+print '--------->>>>>'
+print '5.Python日期和时间'
+print '<<<<<---------'
+
 
 import time;
 
@@ -303,8 +312,10 @@ def calendar_formatter():
 # 打印日历
 # calendar_formatter()
 
+print '--------->>>>>'
+print '6.调用自定义模块里的方法'
+print '<<<<<---------'
 
-print '调用自定义模块里的方法'
 
 # k_date是我自定义的一个模块
 # import k_date
@@ -312,8 +323,10 @@ print '调用自定义模块里的方法'
 
 
 
+print '--------->>>>>'
+print '7.dir()函数'
+print '<<<<<---------'
 
-print 'dir()函数'
 # dir()函数一个排好序的字符串列表，内容是一个模块里定义过的名字。
 # 返回的列表容纳了在一个模块里定义的所有模块，变量和函数。如下一个简单的实例：
 # 他可以返回math模块所有定义的方法
@@ -325,9 +338,9 @@ print 'dir()函数'
 #
 # print content;
 
-
-print 'globals()和locals()函数'
-
+print '-------->>>>>>'
+print '8.globals()和locals()函数'
+print '<<<<<---------'
 # 根据调用地方的不同，globals()和locals()函数可被用来返回全局和局部命名空间里的名字。
 # 如果在函数内部调用locals()，返回的是所有能在该函数里访问的命名。
 # 如果在函数内部调用globals()，返回的是所有在该函数里能访问的全局名字。
@@ -341,3 +354,134 @@ print 'globals()和locals()函数'
 # all_name = 'world'
 # print globals().keys()
 # mine_method()
+
+
+print '-------->>>>>>'
+print '9.Python中的包'
+print '<<<<<---------'
+
+# 不是很理解.
+# 但是功能就是:
+# hello模块import了k_date模块.
+# 然后k_date模块显式包含了alloc和init模块的alloc_method和init_method方法.
+# 这样hello模块只要包含了k_date模块.就可以通过k_date直接调用alloc_method和init_method方法.
+
+# import k_date
+#
+# k_date.init_method()
+# k_date.alloc_method()
+
+
+print '-------->>>>>>'
+print '10.读取键盘输入'
+print '<<<<<---------'
+
+# input([prompt]) 函数和 raw_input([prompt]) 函数基本类似
+# 但是 input 可以接收一个Python表达式作为输入，并将运算结果返回。
+
+def raw_input_and_input():
+    name = raw_input("你的名字:")
+    print "hello,",name
+
+    list = input("数组:")
+    print "你输入的数组是:",list
+
+# raw_input_and_input()
+
+
+print '-------->>>>>>'
+print '11.打开和关闭文件'
+print '<<<<<---------'
+# http://www.runoob.com/python/python-files-io.html
+
+def open_and_close_file():
+    file = open("foo.txt","r+")
+    print "文件名:",file.name
+
+
+
+    file.write("i am a boy!\ngood boy!")
+    # 关闭打开的文件
+    file.close()
+
+    file1 = open("foo.txt","r+")
+
+    str = file1.read(3)
+    print "从foo.txt文件里读取的字符串:",str
+    file.close()
+
+# open_and_close_file()
+
+def location_file():
+    import os
+
+
+    print "当前目录:",os.getcwd()
+
+    fo1 = open("foo.txt","wb")
+    fo1.close()
+
+    # 打开一个文件
+    fo = open("foo.txt", "r+")
+    fo.write("i am a good man!")
+    str = fo.read(10)
+    print "读取的字符串是 : ", str
+
+    # 查找当前位置
+    position = fo.tell()
+    print "当前文件位置 : ", position
+
+    str = fo.read(10)
+    print "读取的字符是:",str
+
+    # 把指针再次重新定位到文件开头
+    position = fo.seek(0, 0)
+    str = fo.read(10)
+    print "重新读取字符串 : ", str
+    # 关闭打开的文件
+    fo.close()
+
+    os.rename("foo.txt","foo2.txt")
+
+
+    # 删除文件
+    os.remove("foo2.txt")
+
+
+# location_file()
+
+
+print '-------->>>>>>'
+print '11.Python里的目录'
+print '<<<<<---------'
+
+def file_manager():
+    import os
+    print "当前目录为:",os.getcwd()
+
+    # os.mkdir("sun")
+    os.chdir("sun")
+
+    print "当前目录为:", os.getcwd()
+
+    # os.chdir("GXPython")
+    # print "当前目录为:", os.getcwd()
+
+    print "",os.pardir
+    print "",os.path.dirname(os.getcwd())
+
+    # 返回上一级目录
+    os.chdir(os.path.dirname(os.getcwd()))
+
+    print "当前目录为:", os.getcwd()
+
+
+    # 删除文件夹
+    os.rmdir("sun")
+
+
+# file_manager()
+
+
+
+
