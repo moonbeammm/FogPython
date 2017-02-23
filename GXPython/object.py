@@ -18,7 +18,7 @@ class Employee:
 
         self.__private_attr = 10000
 
-
+    # 两个下划线开头，声明该方法为私有方法，不能在类地外部调用。在类的内部调用
     def __private_method(self):
         self.name = "sunguangxin"
 
