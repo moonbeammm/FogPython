@@ -1,13 +1,16 @@
 #!/bin/bash
 
 echo '请输入静态库工程目录!'
-read lib_project_path     # 静态库工程的根目录
+# 例:/Users/bilibili/Desktop/GXPython/GXPython
+read lib_project_path
 
 echo '请输入静态库工程输出目录'
-read lib_project_output_path   #Users/bilibili/Desktop  比如桌面
+# 例:/Users/bilibili/Desktop
+read lib_project_output_path
 
 echo '请输入静态库工程名称!'
-read lib_project_name    # GXUtils
+# GXPython
+read lib_project_name
 
 lib_name="lib"$lib_project_name".a"
 
