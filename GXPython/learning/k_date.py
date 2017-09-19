@@ -12,3 +12,5 @@ def print_hello():
 def print_world():
     print '调用了另一个模块的world方法'
     print 'world!!'
+
+print_world

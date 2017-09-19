@@ -4,3 +4,5 @@
 
 def alloc_method():
     print 'alloc模块的方法!'
+
+alloc_method
